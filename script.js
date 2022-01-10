@@ -45,8 +45,10 @@ const compNumber = Math.random();
 console.log(userNumber);
 console.log(compNumber);
 
+const displayGame = document.getElementById("game");
+
 if(userNumber > compNumber){
-    console.log("L'utente ha vinto!");
+    displayGame.innerText = "L'utente ha vinto";
 } else {
-    console.log("Il computer ha vinto!");
+    displayGame.innerText = "Il computer ha vinto";
 }
