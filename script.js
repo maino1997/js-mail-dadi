@@ -7,16 +7,13 @@ const accMail = ["ciao@gmail.com" , "oggi@hotmail.com" , "ieri@yahoo.com"];
 const userMail = prompt("inserisci la tua email");
 
 let aut = false;
-let notAut = false;
 
 for ( i = 0 ; i < accMail.length ; i++){
     currentMail = accMail[i];
 
     if(userMail === currentMail){
       aut = true;
-    } else {
-        notAut = true;
-    }
+    } 
 }
 
 const autMessage = "email corretta";
@@ -30,6 +27,11 @@ if (aut == true){
 }
 
 
+if (accMail.includes(userMail)){
+
+}
+
+
 
 
  
@@ -39,8 +41,8 @@ if (aut == true){
 // Genero numero random per il computer
 // Li confronto e stabilisco il vincitore
 
-const userNumber = Math.random();
-const compNumber = Math.random();
+const userNumber = Math.floor(Math.random() * 6) + 1;
+const compNumber = Math.floor(Math.random() * 6) + 1;
 
 console.log(userNumber);
 console.log(compNumber);
@@ -49,6 +51,8 @@ const displayGame = document.getElementById("game");
 
 if(userNumber > compNumber){
     displayGame.innerText = "L'utente ha vinto";
-} else {
+} else if (userNumber < compNumber) {
     displayGame.innerText = "Il computer ha vinto";
+} else {
+    displayGame.innerText = "Parità";
 }
