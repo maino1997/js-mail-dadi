@@ -50,9 +50,9 @@ console.log(compNumber);
 const displayGame = document.getElementById("game");
 
 if(userNumber > compNumber){
-    displayGame.innerText = "L'utente ha vinto";
+    displayGame.innerText = `L'utente ha vinto con il numero ${userNumber}`;
 } else if (userNumber < compNumber) {
-    displayGame.innerText = "Il computer ha vinto";
+    displayGame.innerText = `Il computer ha vinto con il numero ${compNumber}`;
 } else {
     displayGame.innerText = "Parità";
 }
