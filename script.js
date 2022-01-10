@@ -27,6 +27,8 @@ if (aut == true){
 }
 
 
+// Per fare la stessa cosa si può usare anche il metodo .includes 
+
 if (accMail.includes(userMail)){
 
 }
