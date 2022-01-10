@@ -21,15 +21,15 @@ for ( i = 0 ; i < accMail.length ; i++){
 
 const autMessage = "email corretta";
 const unautMessage = "non sei autorizzato";
+const displayElement = document.getElementById("list");
 
 if (aut == true){
-    console.log("email corretta");
+  displayElement.innerText = autMessage;
 } else {
-    console.log("non sei autorizzato");
+    displayElement.innerText = unautMessage;
 }
 
 
-const displayElement = document.getElementById("list");
 
 
  
