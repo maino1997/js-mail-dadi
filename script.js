@@ -6,21 +6,21 @@ const accMail = ["ciao@gmail.com" , "oggi@hotmail.com" , "ieri@yahoo.com"];
 
 const userMail = prompt("inserisci la tua email");
 
-let aut = false;
+let isAllowed = false;
 
 for ( i = 0 ; i < accMail.length ; i++){
     currentMail = accMail[i];
 
     if(userMail === currentMail){
-      aut = true;
+      isAllowed = true;
     } 
 }
 
+const displayElement = document.getElementById("list");
 const autMessage = "email corretta";
 const unautMessage = "non sei autorizzato";
-const displayElement = document.getElementById("list");
 
-if (aut == true){
+if (isAllowed == true){
   displayElement.innerText = autMessage;
 } else {
     displayElement.innerText = unautMessage;
