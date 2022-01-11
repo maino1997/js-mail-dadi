@@ -51,10 +51,12 @@ console.log(compNumber);
 
 const displayGame = document.getElementById("game");
 
+let message = "Parità";
+
 if(userNumber > compNumber){
-    displayGame.innerText = `L'utente ha vinto con il numero ${userNumber}`;
+    message = `L'utente ha vinto con il numero ${userNumber}`;
 } else if (userNumber < compNumber) {
-    displayGame.innerText = `Il computer ha vinto con il numero ${compNumber}`;
-} else {
-    displayGame.innerText = "Parità";
-}
+    message = `Il computer ha vinto con il numero ${compNumber}`;
+} 
+
+displayGame.innerHTML = `${message}`;
